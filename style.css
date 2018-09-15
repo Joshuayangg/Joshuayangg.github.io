@@ -194,6 +194,10 @@ a.anchor {
 		.home-row {
 			display: block;
 		}
+
+		.meme-text-hint {
+			display: none;
+		}
 }
 
 .form-control {
