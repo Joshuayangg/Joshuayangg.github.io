@@ -26,7 +26,7 @@
             </a> -->
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-main">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
                 <li> <a class="active" href="#">Home</a></li>
                 <li> <a href="#projects">Projects</a></li>
                 <li> <a href="#music">Music</a></li>
@@ -34,31 +34,48 @@
             </ul>
         </div>
     </div>
-</nav>
+  </nav>
 
 
-      <section id="home">
-        <div class="col-md-6">
-          <div class="landing-text">
-            <div class="container">
-                <h1 class="lead">Hi, I'm Josh.</h1>
-                <h3 class="lead">I am a
-                  <span
-                  class="txt-rotate"
-                  data-period="2000"
-                  data-rotate='[ "creator.", "programmer.", "musician.", "dreamer.", "sleeper." ]'></span>
-                </h3>
-              </div>
+  <section id="home">
+    <div class="container home-container">
+      <div class="row home-row">
+        <div class="col-md-4 bgvc1">
+          <div class="background-video-container">
+            <a onclick="toggleMemeDataRotate()">
+            <div class="embed-responsive embed-responsive-4by3">
+                <video autoplay muted loop class="background-video bgleft">
+                  <source src="musicsphere.mp4" type="video/mp4">
+                </video>
             </div>
-        </div>
-        <div class="col-md-6">
-          <div id="background-video-container">
-            <!--<video autoplay muted loop id="background-video">
-              <source src="musicsphere.mp4" type="video/mp4">
-            </video> -->
+          </a>
           </div>
         </div>
-      </section>
+        <div class="col-md-4 lead-container">
+          <div class="landing-text">
+            <h1 class="lead">Hi, I'm Josh.</h1>
+            <h3 class="lead">I am a
+              <span
+              class="txt-rotate"
+              data-period="2000"
+              data-rotate='[ "creator.", "coder.", "musician.", "dreamer.", "sleeper."]'></span>
+            </h3>
+          </div>
+        </div>
+        <div class="col-md-4 bgvc2">
+          <div class="background-video-container">
+            <a onclick="toggleMemeDataRotate()">
+            <div class="embed-responsive embed-responsive-4by3">
+              <video autoplay muted loop class="background-video bgright">
+                <source src="musicsphere.mp4" type="video/mp4">
+                </video>
+              </div>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 <div class="padding" id="projects">
@@ -80,7 +97,7 @@
         <div class="contact-section text-center">
                 <div class="container">
                   <h2 id="contact">Contact</h2>
-                  <p>Feel free to contact me for partnerships or inquiries.</p>
+                  <p>Feel free to contact me (joshua.yang@berkeley.edu) for partnerships or inquiries.</p>
                   <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                       <form class="form-horizontal">
@@ -113,6 +130,20 @@
 
 
 <script>
+
+meme = true;
+
+function toggleMemeDataRotate() {
+  var elements = document.getElementsByClassName('txt-rotate')[0];
+  if (meme) {
+    elements.setAttribute('data-rotate', '[ "🅱️reator.", "🅱️oder.", "🅱️usician.", "🅱️reamer.", "🅱️leeper."]');
+    console.log("YOOO");
+  } else {
+    elements.setAttribute('data-rotate', '[ "creator.", "coder.", "musician.", "dreamer.", "sleeper."]');
+  }
+
+  meme = !meme;
+}
 function sendMail() {
   var link = "mailto:joshua.yang@berkeley.edu"
            + "?cc="
@@ -127,19 +158,19 @@ function sendMail() {
 }
 
 //Code from Typing Carousel from https://speckyboy.com/css-javascript-text-animation-snippets/
-var TxtRotate = function(el, toRotate, period) {
-  this.toRotate = toRotate;
+var TxtRotate = function(el, period) {
+  this.toRotate = JSON.parse(el.getAttribute('data-rotate'));
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 8) || 2000;
   this.txt = '';
-  this.tick();
+  this.tick(this.el);
   this.isDeleting = false;
 };
 
-TxtRotate.prototype.tick = function() {
+TxtRotate.prototype.tick = function(el) {
   var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+  var fullTxt = JSON.parse(this.el.getAttribute('data-rotate'))[i];
 
   if (this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -174,7 +205,7 @@ window.onload = function() {
     var toRotate = elements[i].getAttribute('data-rotate');
     var period = elements[i].getAttribute('data-period');
     if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      new TxtRotate(elements[i], period);
     }
   }
 };
