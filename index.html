@@ -27,9 +27,10 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-main">
             <ul class="nav navbar-nav">
-                <li> <a class="active" href="#">Home</a></li>
-                <li> <a href="#projects">Projects</a></li>
-                <li> <a href="#music">Music</a></li>
+                <li> <a class="active" href="#home">Home</a></li>
+                <li> <a href="#about-me-anchor">About Me</a></li>
+                <li> <a href="#projects-anchor">Projects</a></li>
+                <li> <a href="#music-anchor">Music</a></li>
                 <li> <a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -74,17 +75,57 @@
             </div>
           </div>
         </div>
+        <div class="links-container">
+          <div class="links-row">
+            <!--Linkedin-->
+            <a type="button" class="btn-floating btn-lg btn-li" href="https://www.linkedin.com/in/joshuayang42/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <!--Github-->
+            <a type="button" class="btn-floating btn-lg btn-git" href="https://github.com/Joshuayangg" target="_blank"><i class="fa fa-github"></i></a>
+            <!--Email-->
+            <a type="button" class="btn-floating btn-lg btn-email" href="mailto:joshua.yang@berkeley.edu"><i class="fa fa-envelope"></i></a>
+            <!--Youtube-->
+            <a type="button" class="btn-floating btn-lg btn-yt" href="https://www.youtube.com/channel/UCQd5z89BiUz2TMxnvDcq9Ig" target="_blank"><i class="fa fa-youtube"></i></a>
+            <!--Facebook-->
+            <a type="button" class="btn-floating btn-lg btn-fb" href="https://www.facebook.com/JoshuaYang99" target="_blank"><i class="fa fa-facebook"></i></a>
+          </div>
+        </div>
       </div>
     </section>
 
-
-<div class="padding" id="projects">
-    <div class="container" id="project-contents">
-        <h2>Projects</h2>
-         <p class = "lead">Coming soon.</p>
+<a class="anchor" id="about-me-anchor"></a>
+<div class="padding" id="about-me">
+    <div class="container" id="about-me-contents">
+        <h2>About Me</h2>
+         <p class = "lead">Hi there, traveler! I'm currently a sophomore at UC Berkeley majoring in computer science and music. I enjoy making cool stuff that
+                           matters to people. In my free time, I like to code apps, compose music, and hang out with friends. Feel free to roam around
+                           and check out some things I made! And, if you're feeling adventurous, try clicking one of my music spheres and see what happens!</p>
     </div>
 </div>
 
+<a class="anchor" id="projects-anchor"></a>
+<div class="padding" id="projects">
+    <div class="container" id="project-contents">
+        <h2>Projects</h2>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <p class = "lead">AR Portal</p>
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item project-video" src="https://www.youtube.com/embed/7dp2cy661tE?ecver=1"></iframe>
+            </div>
+            <p class="regular-text lead">• Used Unity and ARKit to build an AR Portal. <br> • Co-directed promotional video.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <p class = "lead">Affinity Homes Showcase</p>
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src="https://vr.stambol.com/embed/17d7pE" allowfullscreen=""></iframe>
+            </div>
+            <p class="regular-text lead">• UI designer of WebVR virtual home showcase app. VR compatible on Microsoft Edge with Windows MR and some mobile phones. <br> • Composed background music for the Affinity Homes showcase.</p>
+          </div>
+       </div>
+    </div>
+</div>
+
+<a class="anchor" id="music-anchor"></a>
 <div class="padding" id="music">
     <div class="container" id="music-contents">
         <h2>Music</h2>
@@ -92,72 +133,51 @@
     </div>
 </div>
 
+<div class="padding"></div>
+
 
 <footer class="container-fluid text-center">
         <div class="contact-section text-center">
                 <div class="container">
                   <h2 id="contact">Contact</h2>
                   <p>Feel free to contact me (joshua.yang@berkeley.edu) for partnerships or inquiries.</p>
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <form class="form-horizontal">
-                        <div class="form-group">
-                          <label for="exampleInputName2">Name</label>
-                          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="exampleInputEmail2">Email</label>
-                          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                        </div>
-
-                        <div class="form-group">
-                          <label for="exampleSubject">Subject</label>
-                          <input type="text" class="form-control" id="subject" placeholder="Subject">
-                        </div>
-
-                        <div class="form-group ">
-                         <label for="exampleInputText">Your Message</label>
-                         <textarea  class="form-control" placeholder="Description" id="message"></textarea>
-                        </div>
-                        <button onclick="sendMail()" type="reset" class="btn btn-default">Send Message</button>
-                      </form>
-                    </div>
+                </div>
+                <div class="links-container">
+                  <div class="bottom-links-row">
+                    <!--Linkedin-->
+                    <a type="button" class="btn-floating btn-lg btn-li" href="https://www.linkedin.com/in/joshuayang42/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <!--Github-->
+                    <a type="button" class="btn-floating btn-lg btn-git" href="https://github.com/Joshuayangg" target="_blank"><i class="fa fa-github"></i></a>
+                    <!--Email-->
+                    <a type="button" class="btn-floating btn-lg btn-email" href="mailto:joshua.yang@berkeley.edu"><i class="fa fa-envelope"></i></a>
+                    <!--Youtube-->
+                    <a type="button" class="btn-floating btn-lg btn-yt" href="https://www.youtube.com/channel/UCQd5z89BiUz2TMxnvDcq9Ig" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <!--Facebook-->
+                    <a type="button" class="btn-floating btn-lg btn-fb" href="https://www.facebook.com/JoshuaYang99" target="_blank"><i class="fa fa-facebook"></i></a>
                   </div>
                 </div>
             </div>
 </footer>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
-meme = true;
+var meme = true;
+var isAutoScrolling = false;
 
 function toggleMemeDataRotate() {
   var elements = document.getElementsByClassName('txt-rotate')[0];
   if (meme) {
     elements.setAttribute('data-rotate', '[ "🅱️reator.", "🅱️oder.", "🅱️usician.", "🅱️reamer.", "🅱️leeper."]');
-    console.log("YOOO");
+    console.log("Meme");
   } else {
     elements.setAttribute('data-rotate', '[ "creator.", "coder.", "musician.", "dreamer.", "sleeper."]');
   }
 
   meme = !meme;
 }
-function sendMail() {
-  var link = "mailto:joshua.yang@berkeley.edu"
-           + "?cc="
-           + "&subject=" + escape(document.getElementById("subject").value)
-           + "&body=" + escape(document.getElementById("message").value)
-  ;
-  console.log(link);
-  console.log(window.location.href);
-  window.location.href = link;
-  console.log(window.location.href);
 
-}
-
-//Code from Typing Carousel from https://speckyboy.com/css-javascript-text-animation-snippets/
+//Code taken and modified from https://speckyboy.com/css-javascript-text-animation-snippets/
 var TxtRotate = function(el, period) {
   this.toRotate = JSON.parse(el.getAttribute('data-rotate'));
   this.el = el;
@@ -209,6 +229,72 @@ window.onload = function() {
     }
   }
 };
+
+// Code from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("nav a").on('click', function(event) {
+    isAutoScrolling = true;
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 600, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+        isAutoScrolling = false;
+      });
+    } // End if
+  });
+});
+
+// Set nav bar item active code.
+$(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).addClass("active");
+});
+
+// Nav bar active on scroll. Code from: https://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll.
+// Cache selectors
+var topMenu = $(".navbar-nav");
+var topMenuHeight = topMenu.outerHeight()+15;
+    // All list items
+var  menuItems = topMenu.find("a");
+    // Anchors corresponding to menu items
+var  scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind to scroll
+$(window).scroll(function(){
+  if (!isAutoScrolling) {
+    // Get container scroll position
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+
+    // Get id of current scroll item
+    var cur = scrollItems.map(function(){
+      if ($(this).offset().top < fromTop)
+        return this;
+    });
+    // Get the id of the current element
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    // Set/remove active class
+    $(".nav").find(".active").removeClass("active");
+    menuItems.filter("[href='#"+id+"']").addClass("active");
+  }
+})
+
 </script>
 <!--
 iOS Fixed Image Fix
