@@ -25,6 +25,15 @@ h2 {
 	max-height: 500px;
 }
 
+.resume-icon {
+	font-size: 20px;
+	color: rgb(0,0,0);
+}
+
+#resume-text {
+	font-size: 15px;
+}
+
 .contact-section {
 	position: relative;
 }
@@ -44,6 +53,7 @@ a:hover{
 
 .links-container {
 	width: 100%;
+	height: 1px;
 	bottom: 0;
 }
 
@@ -93,7 +103,6 @@ a:hover{
 	  max-width: 600px;
 		max-height: 600px;
 		width: 120% !important;
-		height: 120% !important;
 }
 
 .bgleft {
