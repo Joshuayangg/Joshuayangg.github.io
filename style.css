@@ -50,15 +50,17 @@ a:hover{
 .links-row {
 	position: absolute;
   bottom: 35px;
+	width: 450px;
   left: 50%;
   transform: translateX(-50%);
+	text-align: center;
 }
 
 .bottom-links-row {
 	position: absolute;
   bottom: -80px;
   left: 50%;
-	width:100%;
+	width: 450px;
   transform: translateX(-50%);
 }
 
@@ -192,7 +194,7 @@ a.anchor {
 
 footer {
 	width: 100%;
-	background-color: rgba(0,0,0, 0.9);
+	background-color: rgba(0,0,0, 0.97);
 	padding: 5% 5% 10% 5%;
 	color: #FFF;
 }
