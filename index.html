@@ -3,6 +3,7 @@
 <head>
   <title>Joshua Yang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Moon_Letter_J.svg/2000px-Moon_Letter_J.svg.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -43,7 +44,7 @@
       <div class="row home-row">
         <div class="col-md-4 bgvc1">
           <div class="background-video-container">
-            <a onclick="toggleMemeDataRotate()">
+            <a onclick="toggleMeme()">
             <div class="embed-responsive embed-responsive-4by3">
                 <video autoplay muted loop class="background-video bgleft">
                   <source src="musicsphere.mp4" type="video/mp4">
@@ -54,7 +55,7 @@
         </div>
         <div class="col-md-4 lead-container">
           <div class="landing-text">
-            <h1 class="lead">Hi, I'm Josh.</h1>
+            <h1 class="lead" id="greeting">Hi, I'm Josh.</h1>
             <h3 class="lead">I am a
               <span
               class="txt-rotate"
@@ -65,7 +66,7 @@
         </div>
         <div class="col-md-4 bgvc2">
           <div class="background-video-container">
-            <a onclick="toggleMemeDataRotate()">
+            <a onclick="toggleMeme()">
             <div class="embed-responsive embed-responsive-4by3">
               <video autoplay muted loop class="background-video bgright">
                 <source src="musicsphere.mp4" type="video/mp4">
@@ -186,14 +187,20 @@
 var meme = true;
 var isAutoScrolling = false;
 
-function toggleMemeDataRotate() {
+function toggleMeme() {
   var elements = document.getElementsByClassName('txt-rotate')[0];
+  var greeting = document.getElementById('greeting');
+
   if (meme) {
     elements.setAttribute('data-rotate', '[ "🅱️reator.", "🅱️oder.", "🅱️usician.", "🅱️reamer.", "🅱️leeper."]');
+    greeting.textContent = "Hi, I'm 🅱️osh.";
     console.log("Meme");
   } else {
     elements.setAttribute('data-rotate', '[ "creator.", "coder.", "musician.", "dreamer.", "sleeper."]');
+    greeting.textContent = "Hi, I'm Josh.";
   }
+
+
 
   meme = !meme;
 }
